@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AgendaEscolar.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vistas="clr-namespace:AgendaEscolar.Vistas"
+    FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="Inicio">
+        <ShellContent
+            Title="Inicio"
+            ContentTemplate="{DataTemplate vistas:InicioPage}"
+            Route="inicio" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Completadas">
+        <ShellContent
+            Title="Completadas"
+            ContentTemplate="{DataTemplate vistas:CompletadasPage}"
+            Route="completadas" />
+    </FlyoutItem>
+
+</Shell>

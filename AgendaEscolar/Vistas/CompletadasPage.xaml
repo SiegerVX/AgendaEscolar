@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AgendaEscolar.Vistas.CompletadasPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Completadas"
+    BackgroundColor="#F4F6FA">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label
+            Text="Actividades completadas"
+            FontSize="26"
+            FontAttributes="Bold"
+            TextColor="#263238" />
+
+        <Label
+            Text="Aquí puedes consultar las actividades que ya terminaste."
+            FontSize="14"
+            TextColor="#607D8B" />
+
+        <CollectionView
+            x:Name="ListaCompletadas"
+            EmptyView="Todavía no hay actividades completadas."
+            SelectionMode="Single"
+            SelectionChanged="OnActividadSeleccionada">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Border
+                        BackgroundColor="White"
+                        Stroke="#E0E5EC"
+                        StrokeThickness="1"
+                        Padding="15"
+                        Margin="0,5"
+                        StrokeShape="RoundRectangle 12">
+
+                        <VerticalStackLayout Spacing="7">
+
+                            <Label
+                                Text="{Binding Nombre}"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="#263238" />
+
+                            <Label
+                                Text="{Binding Materia, StringFormat='Materia: {0}'}"
+                                FontSize="14"
+                                TextColor="#546E7A" />
+
+                            <Label
+                                Text="{Binding FechaEntrega, StringFormat='Fecha de entrega: {0:dd/MM/yyyy}'}"
+                                FontSize="14"
+                                TextColor="#2563EB" />
+
+                            <Label
+                                Text="Actividad completada"
+                                FontSize="13"
+                                FontAttributes="Bold"
+                                TextColor="#16834A" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+
+</ContentPage>

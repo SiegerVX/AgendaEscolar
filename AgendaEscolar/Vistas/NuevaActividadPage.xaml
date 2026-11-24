@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AgendaEscolar.Vistas.NuevaActividadPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Nueva actividad"
+    BackgroundColor="#F4F6FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="22" Spacing="12">
+
+            <Label
+                Text="Registrar actividad"
+                FontSize="26"
+                FontAttributes="Bold"
+                TextColor="#263238" />
+
+            <Label
+                Text="Completa la información de tu actividad escolar."
+                FontSize="14"
+                TextColor="#607D8B" />
+
+            <Label Text="Nombre de la actividad"
+                   TextColor="#2563EB"
+                   FontAttributes="Bold" />
+            <Entry
+                x:Name="EntradaNombre"
+                Placeholder="Ej. Investigación de bases de datos"
+                TextColor="#000000"
+                PlaceholderColor="#777777"
+                BackgroundColor="White" />
+
+            <Label Text="Materia"
+                   TextColor="#2563EB"
+                   FontAttributes="Bold" />
+            <Entry
+                x:Name="EntradaMateria"
+                Placeholder="Ej. Bases de datos"
+                TextColor="#000000"
+                PlaceholderColor="#777777"
+                BackgroundColor="White" />
+
+            <Label Text="Fecha de asignación"
+                   TextColor="#2563EB"
+                   FontAttributes="Bold" />
+            <DatePicker
+                x:Name="SelectorFechaAsignacion"
+                Format="dd/MM/yyyy"
+                TextColor="#000000"
+                BackgroundColor="White" />
+
+            <Label Text="Fecha de entrega"
+                   TextColor="#2563EB"
+                   FontAttributes="Bold" />
+            <DatePicker
+                x:Name="SelectorFechaEntrega"
+                Format="dd/MM/yyyy"
+                TextColor="#000000"
+                BackgroundColor="White" />
+
+            <Label Text="Descripción"
+                   TextColor="#2563EB"
+                   FontAttributes="Bold" />
+            <Editor
+                x:Name="EntradaDescripcion"
+                Placeholder="Describe lo que debes realizar..."
+                TextColor="#000000"
+                PlaceholderColor="#777777"
+                HeightRequest="120"
+                BackgroundColor="White" />
+
+            <Button
+                Text="Guardar actividad"
+                Clicked="OnGuardarClicked"
+                BackgroundColor="#356AE6"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50" />
+
+            <Button
+                Text="Cancelar"
+                Clicked="OnCancelarClicked"
+                BackgroundColor="#E0E5EC"
+                TextColor="#263238"
+                CornerRadius="12"
+                HeightRequest="45" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
